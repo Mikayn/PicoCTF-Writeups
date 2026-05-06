@@ -6,7 +6,7 @@
 
 Launching the instance in the website, there is an option to input a username. 
 
-![{B7F63B2B-6A50-4C34-BA3C-716979EB3A60}.png](JaWT%20Scratchpad/B7F63B2B-6A50-4C34-BA3C-716979EB3A60.png)
+![{B7F63B2B-6A50-4C34-BA3C-716979EB3A60}.png](Images/B7F63B2B-6A50-4C34-BA3C-716979EB3A60.png)
 
 There is also plenty of subtle hints regarding the challenge like the `john` (hinting to John the Ripper) or `powered by JWT`(hinting a JWT). Combining these two, it can be assumed that the HMAC secret of the JWT is weak and brute forceable. 
 
@@ -20,13 +20,13 @@ Wow rude much. All of us are special. Anyways I picked another name and logged i
 
  
 
-![{28FCAB5A-999F-4523-B631-37F5DB88093D}.png](JaWT%20Scratchpad/28FCAB5A-999F-4523-B631-37F5DB88093D.png)
+![{28FCAB5A-999F-4523-B631-37F5DB88093D}.png](Images/28FCAB5A-999F-4523-B631-37F5DB88093D.png)
 
 The scratchpad really should not the focus, as it is just client side. 
 
 The system uses JWTs to keep track of logins. Decoding one gives:
 
-![{1E0A621A-229B-4E73-9F71-55A4D401DF5A}.png](JaWT%20Scratchpad/1E0A621A-229B-4E73-9F71-55A4D401DF5A.png)
+![{1E0A621A-229B-4E73-9F71-55A4D401DF5A}.png](Images/1E0A621A-229B-4E73-9F71-55A4D401DF5A.png)
 
 I tried just changing the value of user just in case the server does not verify signatures, but it leads to an invalid token. 
 
@@ -92,11 +92,11 @@ Stopped: Tue May  5 17:59:58 2026
 
 With the secret found, it is possible to create a key ourselves, and use that key to sign the tampered JWT with `"user":"admin"`. This can be done easily using the `JWT Editor` extension in burpsuite. 
 
-![{D523E2E5-A2E4-4527-AF8B-CF6D6BE3AF19}.png](JaWT%20Scratchpad/D523E2E5-A2E4-4527-AF8B-CF6D6BE3AF19.png)
+![{D523E2E5-A2E4-4527-AF8B-CF6D6BE3AF19}.png](Images/D523E2E5-A2E4-4527-AF8B-CF6D6BE3AF19.png)
 
 Now, the username can be changed to “admin” and the forged token can be resigned with the correct key.
 
-![{574C2CC6-08DC-4713-B8A0-4472582BC31C}.png](JaWT%20Scratchpad/574C2CC6-08DC-4713-B8A0-4472582BC31C.png)
+![{574C2CC6-08DC-4713-B8A0-4472582BC31C}.png](Images/574C2CC6-08DC-4713-B8A0-4472582BC31C.png)
 
 When the request is sent, I am in admin’s account, and thereby got the flag. 
 
