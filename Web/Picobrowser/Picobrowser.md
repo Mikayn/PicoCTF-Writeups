@@ -2,13 +2,13 @@
 
 ### Challenge Description:
 
-![{4E8EEB22-1054-4AD8-8960-32936B82BF2F}.png](Picobrowser/4E8EEB22-1054-4AD8-8960-32936B82BF2F.png)
+![{4E8EEB22-1054-4AD8-8960-32936B82BF2F}.png](Images/4E8EEB22-1054-4AD8-8960-32936B82BF2F.png)
 
 ### Exploitation
 
 Launching the instance, we can see a button to call the flag. When pressed, it redirects to `/flag` and shows an error. 
 
-![{BF79944F-0933-45A0-85F7-E5E6766A32FB}.png](Picobrowser/BF79944F-0933-45A0-85F7-E5E6766A32FB.png)
+![{BF79944F-0933-45A0-85F7-E5E6766A32FB}.png](Images/BF79944F-0933-45A0-85F7-E5E6766A32FB.png)
 
 Had the challenge not reflected the user agent, I probably would have been stuck. But, this is a freebie, and it was obvious to change my user-agent to `picobrowser`.  This can be changed in `burpsuite` or `OWASP Zap`. 
 
