@@ -2,21 +2,21 @@
 
 ### Challenge Information:
 
-![{4E12EC81-BDC4-43A8-BECF-42FBDB2BA9EF}.png](Irish-Name-Repo%203/4E12EC81-BDC4-43A8-BECF-42FBDB2BA9EF.png)
+![{4E12EC81-BDC4-43A8-BECF-42FBDB2BA9EF}.png](Images/4E12EC81-BDC4-43A8-BECF-42FBDB2BA9EF.png)
 
 ### Exploitation
 
 The challenge requires logging in as admin to solve. The website lists some famous Irish people (I think Idk any of them).
 
-![{ACB01023-BDF2-424A-8979-BAB8AD9CAA57}.png](Irish-Name-Repo%203/ACB01023-BDF2-424A-8979-BAB8AD9CAA57.png)
+![{ACB01023-BDF2-424A-8979-BAB8AD9CAA57}.png](Images/ACB01023-BDF2-424A-8979-BAB8AD9CAA57.png)
 
 The menu has 2 options: `support` and `admin login`. As part of recon, I viewed support first, which was a Q&A between site admin and the users. This interaction was quite hilarious and also gave a valuable insight. 
 
-![{2A1DE182-C8A1-4F4C-BD14-3BEA0CE65340}.png](Irish-Name-Repo%203/2A1DE182-C8A1-4F4C-BD14-3BEA0CE65340.png)
+![{2A1DE182-C8A1-4F4C-BD14-3BEA0CE65340}.png](Images/2A1DE182-C8A1-4F4C-BD14-3BEA0CE65340.png)
 
 SQLi was going to be my first attempt if I had not found anything else, so this worked out fine. 
 
-![{F03D9126-15FD-4745-A5E2-0FDC1844F758}.png](Irish-Name-Repo%203/F03D9126-15FD-4745-A5E2-0FDC1844F758.png)
+![{F03D9126-15FD-4745-A5E2-0FDC1844F758}.png](Images/F03D9126-15FD-4745-A5E2-0FDC1844F758.png)
 
 I tried the classic check for SQLi, even though it is already confirmed, by passing `'` and the site does throw an error. 
 
