@@ -37,7 +37,7 @@ def bruteforcer():
             break
 
 
-def user_checker():
+def position_identifier():
     for i in range(1, 20):
         print (i)
 
