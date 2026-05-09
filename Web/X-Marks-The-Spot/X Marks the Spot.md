@@ -2,13 +2,13 @@
 
 ## Challenge Description:
 
-![Images/{2EAB272E-2147-4727-8443-3B674E136ABD}.png](2EAB272E-2147-4727-8443-3B674E136ABD.png)
+![{Images/2EAB272E-2147-4727-8443-3B674E136ABD}.png](Images/2EAB272E-2147-4727-8443-3B674E136ABD.png)
 
 ## Exploitation:
 
 Launching the website gives a login form. 
 
-![Images/{4C04CE5D-49EC-4AA4-BDEA-553BAC799C4A}.png](4C04CE5D-49EC-4AA4-BDEA-553BAC799C4A.png)
+![Images/{4C04CE5D-49EC-4AA4-BDEA-553BAC799C4A}.png](Images/4C04CE5D-49EC-4AA4-BDEA-553BAC799C4A.png)
 
 The site owner claims this to be secure, but lets see. I decided not to trust the owner and try SQLi first and it does throw an error. 
 
@@ -72,7 +72,7 @@ thereby logging in as the user “admin”.
 
 In the challenge’s case, there is no obvious username so I tried admin first. It did not log me in but it did give an encouraging message. 
 
-![Images/image.png](image.png)
+![Images/image.png](Images/image.png)
 
 I assume I was not able to log in because of the wrong username. When I remove the admin, it gives `Login Failure`. Ok so this is **Blind XPATH Injection.** Error or success is not explicitely shown, but depending on if the `username`and `password` parameter are both true, it shows **right path** or **login failed**. 
 
