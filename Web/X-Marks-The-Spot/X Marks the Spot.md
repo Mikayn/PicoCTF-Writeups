@@ -192,4 +192,4 @@ picoCTF{REDACTED}picoCTF{REDACTED}
 
 And thats the flag. I underestimated the medium challenges I have done here, and attempted a hard one. Safe to say I wont underestimate other challenges again. 
 
-The entire script (along with user_checker ) can be found in `script.py`.
+The entire script (along with position_identifier ) can be found in `script.py`.
